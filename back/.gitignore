@@ -1,0 +1,23 @@
+# Node modules
+node_modules/
+
+# Arquivos de build
+dist/
+
+# Variáveis de ambiente
+.env
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Arquivos do sistema
+.DS_Store
+Thumbs.db
+
+# VSCode
+.vscode/
+
+# Arquivos temporários
+*.tsbuildinfo
