@@ -2,7 +2,7 @@
 import { Request, Response, NextFunction } from 'express';
 import { verifyToken } from '../utils/jwtUtils';
 
-export function authenticate(req: Request, res: Response, next: NextFunction) {
+export function authenticate(req: Request, res: Response, next: NextFunction):any {
   const token = req.header('Authorization')?.replace('Bearer ', '');
 
   if (!token) {

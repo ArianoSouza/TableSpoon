@@ -10,3 +10,10 @@ export async function getDataLogin(email:string) {
 }
 
 
+export async function getTimeStampOfTables() {
+  const [timeStamp] = await db('restTable').select('avalibleTime')
+  const [reservations] = await db('reservations').select('reservationTimeStamp')
+
+  const filterAvalibleReservations = timeStamp.filter((data:string)=>{data !== reservations})
+  return timeStamp && reservations
+}
